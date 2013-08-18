@@ -1,0 +1,132 @@
+#cosmetic { .init() {
+// -----------------------------------------
+// косметические классы (все классы идут с префиксом -k-)
+//------------------------------------------
+
+// class name variable ---------------------
+@-k-hide: -k-hide;
+@-k-cursor-normal: -k-cursor-normal;
+
+@-k-spacer: -k-spacer; // отступ снизу
+@-k-spacer_l: -k-spacer_l; // отступ слева
+@-k-spacer_r: -k-spacer_r; // отступ справа
+@-k-spacer_t: -k-spacer_t; // отступ сверху
+@-k-spacer-half_l: -k-spacer-half_l; // отступ слева
+@-k-spacer-half_r: -k-spacer-half_r;
+
+@-k-null_r: -k-null_r; // обнулить отступ c справа/слева/снизу/сверху
+@-k-null_l: -k-null_l;
+@-k-null_b: -k-null_b;
+@-k-null_t: -k-null_t;
+
+@-k-padding_lr: -k-padding_lr; // поля слева и справа
+@-k-padding: -k-padding; // поля
+
+@-k-left: -k-left; // float left
+@-k-right: -k-right; // float right
+@-k-clear: -k-clear; // блок реагирующий на элементы c флоат
+
+@-k-big-text:    -k-big-text;    // маленький размер текста
+@-k-middle-text: -k-middle-text; // средний размер текста
+@-k-small-text:  -k-small-text;  // большой размер текста
+@-k-ghost-text:  -k-ghost-text;  // полупрозрачный текст
+// ----------------------------------------
+
+// local variable and mixin ---------------
+
+// ----------------------------------------
+
+// COMPONENT STYLE ------------------------
+.@{-k-hide} {
+  position: absolute !important;
+  left: -9999px !important;
+  font-size: 0px !important;
+}
+.@{-k-cursor-normal} {
+  cursor: default;
+}
+// ----------------------------------------
+
+// MODULES --------------------------------
+// отступы с разных сторон (margin)
+.Spacer(@spacerSize) {
+  .@{-k-spacer} {
+    margin-bottom: @spacerSize !important;
+  }
+  .@{-k-spacer_l} {
+    margin-left: @spacerSize !important;
+  }
+  .@{-k-spacer_r} {
+    margin-right: @spacerSize !important;
+  }
+  .@{-k-spacer_t} {
+    margin-top: @spacerSize !important;
+  }
+  .@{-k-spacer-half_l} {
+    margin-left: @spacerSize / 2 !important;
+  }
+  .@{-k-spacer-half_r} {
+    margin-right: @spacerSize / 2 !important;
+  }
+} // END spacer()
+
+// поля (padding)
+.Padding(@paddingSize) {
+  .@{-k-padding_lr} {
+    padding-right: @paddingSize !important;
+    padding-left: @paddingSize !important;
+  }
+  .@{-k-padding} {
+    padding: @paddingSize !important;
+  }
+} // END padding
+
+// обнуления отступов и полей
+.Null() {
+  .@{-k-null_r} {
+    margin-right: 0 !important;
+  }
+  .@{-k-null_l} {
+    margin-left: 0 !important;
+  }
+  .@{-k-null_b} {
+    margin-bottom: 0 !important;
+  }
+  .@{-k-null_t} {
+    margin-top: 0 !important;
+  }
+} // END null()
+
+// флоат классы
+.Float() {
+  .@{-k-left} {
+    float: left !important;
+  }
+  .@{-k-right} {
+    float: right !important;
+  }
+  .@{-k-clear} {
+    clear: both !important;
+  }
+} // END float()
+
+// типографические классы
+.Typography(@fontSizeBig, @fontSizeMiddle, @fontSizeSmall, @colorTextGhost) {
+  .@{-k-big-text} {
+    font-size: @fontSizeBig !important;
+    line-height: 1.5em;
+  }
+  .@{-k-middle-text} {
+    font-size: @fontSizeMiddle !important;
+    line-height: 1em;
+  }
+  .@{-k-small-text} {
+    font-size: @fontSizeSmall !important;
+    line-height: 1;
+  }
+  .@{-k-ghost-text} {
+    color: @colorTextGhost !important;
+  }
+}
+//----------------------------------
+}}

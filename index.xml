@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt/templ.xsl" ?>
+<!DOCTYPE page [ <!ENTITY nbsp "&#x00A0;"> ]>
+<page>
+    <assets>
+        <icons>
+            <link type="image/x-icon">assets/img/icons/favicon.ico</link>
+        </icons>
+        <css>
+            <link>http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&amp;subset=latin,cyrillic</link>
+            <link>assets/css/style.css</link>
+        </css>
+        <js>
+            <link loadLocaly="true">//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</link>
+            <link ie="lt9">//html5shiv.googlecode.com/svn/trunk/html5.js</link>
+            <link>assets/plugins/uiNova/uiNova.js</link>
+            <link>assets/plugins/formNova/formNova.js</link>
+            <link>assets/js/common.js</link>
+        </js>
+    </assets>
+    <seo_info>
+        <descr>Описание</descr>
+        <kw>ключевые слова</kw>
+        <title>Ответ на вопрос № 15</title>
+    </seo_info>
+    <page_code>
+        <header>
+            <logo_text>ШРИ 2013</logo_text>
+            <logo_descr>
+                Ответ на&nbsp;тестовый вопрос №15
+                Школы&nbsp;разработки&nbsp;интерфесов
+            </logo_descr>
+        </header>
+        <content>
+            <progress_bar>15</progress_bar>
+            <form>
+                <form_questions>
+                    <title>Заполните анкету</title>
+
+                    <question name="q1_1" type="text">
+                        <label>Вопрос 1</label>
+                        <descr>Год рождения.</descr>
+                        <validRule>required|isNaturalNoZero|greaterThan[1950]</validRule>
+                    </question>
+
+                    <question name="q2_1" type="text">
+                        <label>Вопрос 2</label>
+                        <descr>Город, в&nbsp;котором вы живёте.</descr>
+                        <validRule>required|alphaRUdash|minLength[2]</validRule>
+                    </question>
+
+                    <question name="q3_1" type="textarea">
+                        <label>Вопрос 3</label>
+                        <descr>Вуз, факультет, специальность, кафедра.</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q4_1" type="text">
+                        <label>Вопрос 4</label>
+                        <descr>Год окончания вуза.</descr>
+                        <validRule>required|isNaturalNoZero|greaterThan[2000]</validRule>
+                    </question>
+
+                    <question name="q5_1" type="textarea">
+                        <label>Вопрос 5</label>
+                        <descr>Уровень владения английским языком:</descr>
+                        <validRule>required</validRule>
+                        <radioBtn name="radio1">
+                            <item value="1">начальный</item>
+                            <item value="2">cредний</item>
+                            <item value="3">свободное владение</item>
+                        </radioBtn>
+                    </question>
+
+                    <question name="q6_1" type="textarea">
+                        <label>Вопрос 6</label>
+                        <descr>Чего вы ожидаете от&nbsp;участия в&nbsp;Школе?</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q7_1" type="textarea">
+                        <label>Вопрос 7</label>
+                        <descr>Откуда вы о&nbsp;нас узнали?</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q8_1" type="textarea">
+                        <label>Вопрос 8</label>
+                        <descr>Сколько времени вы были бы&nbsp;готовы уделять стажировке или работе в&nbsp;Яндексе?</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q9_1" type="textarea">
+                        <label>Вопрос 9</label>
+                        <descr>Расскажите о&nbsp;вашем опыте разработки. Нам будет интересно всё&nbsp;— как серьезный интерфейс, так&nbsp;и просто домашняя страничка.</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q10_1" type="textarea">
+                        <label>Вопрос 10</label>
+                        <descr>Если вы где-нибудь работали, расскажите, какие у&nbsp;вас были должностные обязанности и был ли&nbsp;опыт работы в&nbsp;команде.</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q11_1" type="textarea">
+                        <label>Вопрос 11</label>
+                        <descr>Перечислите, какими программными продуктами вы пользуетесь в&nbsp;своей работе — от&nbsp;редактора до
+                            специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента
+                            укажите, какие задачи вы с&nbsp;помощью него решаете и почему выбрали именно его.</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q12_1" type="textarea">
+                        <label>Вопрос 12</label>
+                        <descr>Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете
+                            с&nbsp;их помощью? С&nbsp;какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?</descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q13_1" type="textarea">
+                        <label>Вопрос 13</label>
+                        <descr>
+                            Напишите на&nbsp;JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов
+                            своих цифр. Пример такого числа:
+                        </descr>
+                        <descr>
+                            <i>4! + 0! + 5! + 8! + 5! = 40585</i>
+                        </descr>
+                        <descr>
+                            В качестве ответа на&nbsp;вопрос пришлите ссылку на&nbsp;http://jsfiddle.net/
+                            с&nbsp;вашим кодом или на&nbsp;ваш репозиторий на&nbsp;https://github.com/.
+                        </descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q14_1" type="textarea">
+                        <label>Вопрос 14</label>
+                        <descr>
+                            Вы&nbsp;— пилот грузового межгалактического корабля. Ваша работа&nbsp;— перевозка грузов с&nbsp;одной планету на&nbsp;другую.
+                            Грузоподъемность вашего корабля ограничена, поэтому за&nbsp;один рейс вы можете перевезти не&nbsp;более N&nbsp;кг полезного груза.
+                            Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а&nbsp;также летать
+                            в&nbsp;любую точку пространства. Каждая планета может содержать на&nbsp;себе груз, который можно взять.
+                            Также на&nbsp;каждой планете груз можно оставить.
+                        </descr>
+                        <descr>
+                            <strong>Задание:</strong>
+                        </descr>
+                        <descr>
+                            Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
+                            Полное условие задачи доступно на&nbsp;https://github.com/yandex-shri/introtask-space.
+                            В качестве ответа на&nbsp;вопрос пришлите ссылку на&nbsp;http://jsfiddle.net/ с&nbsp;вашим кодом
+                            или на&nbsp;ваш репозиторий на&nbsp;https://github.com/.
+                        </descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                    <question name="q15_1" type="textarea">
+                        <label>Вопрос 15</label>
+                        <descr>
+                            Сверстайте форму-анкету с&nbsp;нашими заданиями для кандидатов.
+                            Страница должна работать в&nbsp;следующих браузерах:
+                            MSIE (8, 9, 10), Google Chrome (26, 27), Firefox (20, 21), Opera (12.15, 12.14), Яндекс.Браузер 1.5.
+                            По&nbsp;возможности используйте приёмы безопасной деградации CSS.
+                            Страница должна содержать интерактив, реализованный с&nbsp;помощью JS и jQuery. Это может быть:
+                        </descr>
+                        <descr>
+                            Подумайте над тем, как эти данные будут отправляться на&nbsp;сервер.
+                        </descr>
+                        <descr>
+                            Будет плюсом, если вы сверстаете страницу, используя БЭМ.
+                        </descr>
+                        <descr>
+                            Дополнительные задания
+                        </descr>
+                        <descr>
+                            1. Выполните задание про форму-анкету, используя один из&nbsp;классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.
+                        </descr>
+                        <descr>
+                            2. Выполните задание про форму-анкету, используя один из&nbsp;экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.
+                        </descr>
+                        <descr>
+
+                                Разработку необходимо вести на&nbsp;https://github.com/. В&nbsp;качестве ответа на&nbsp;вопрос пришлите ссылку на проект.
+                        </descr>
+                        <validRule>required</validRule>
+                    </question>
+
+                </form_questions>
+                <form_userInfo>
+                    <title>Расскажите нам о&nbsp;себе</title>
+                    <file name="FileResume">
+                        <label>Резюме до&nbsp;250 КБ</label>
+                    </file>
+                    <inputs>
+                        <MK name="MK">
+                            <label>Ссылка на профиль в Моем Круге</label>
+                            <validRules>required</validRules>
+                        </MK>
+                        <firstName name="firstName">
+                            <label>Имя</label>
+                            <validRules>required|alphaRU</validRules>
+                        </firstName>
+                        <lastName name="lastName">
+                            <label>Фамилия</label>
+                            <validRules>required|alphaRU</validRules>
+                        </lastName>
+                        <Phone name="Phone">
+                            <label>Телефон</label>
+                            <validRules>required|numericDash</validRules>
+                        </Phone>
+                        <CityCode name="CityCode">
+                            <validRules>required|numeric</validRules>
+                        </CityCode>
+                        <Email name="Email">
+                            <label>E-mail</label>
+                            <validRules>required|validEmail</validRules>
+                        </Email>
+                    </inputs>
+
+
+                    <textarea name="MoreInfo">
+                        <label>Дополнительные сведения</label>
+                    </textarea>
+
+                    <select name="RecommendBy">
+                        <label>Откуда вы узнали о нашем предложении?</label>
+                        <item val="no">Выбрать</item>
+                        <item val="от HR-менеджера Яндекса">от HR-менеджера Яндекса</item>
+                        <item val="Я.Субботник">Я.Субботник</item>
+                        <item val="Yet another Conference">Yet another Conference</item>
+                        <item val="на другой конференции">на другой конференции</item>
+                        <item val="из поиска">из поиска</item>
+                        <item val="по рекомендации">по рекомендации</item>
+                        <item val="other">другое</item>
+                        <validRules>selectRule</validRules>
+                    </select>
+
+                    <checkbox name="rr1">
+                        <label>
+                            Я даю свое согласие на&nbsp;передачу в&nbsp;ООО&nbsp;«ЯНДЕКС»
+                            резюме и/или&nbsp;анкеты, содержащих мои персональные данные, и&nbsp;согласен
+                            с&nbsp;тем, что они будут храниться в&nbsp;ООО&nbsp;«ЯНДЕКС»
+                            в&nbsp;течение 5&nbsp;лет и&nbsp;будут обрабатываться
+                            исключительно для целей предложения мне вакансий группы компаний
+                            «ЯНДЕКС», в&nbsp;соответствии с&nbsp;Федеральным законом «О&nbsp;персональных данных».
+                        </label>
+                        <validRules>required</validRules>
+                    </checkbox>
+                </form_userInfo>
+            </form>
+        </content>
+        <footer>
+            <name>Михаил Махоткин</name>
+            <link>#</link>
+        </footer>
+    </page_code>
+</page>

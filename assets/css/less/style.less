@@ -1,0 +1,184 @@
+@charset "UTF-8";
+// -----------------------------------------
+// COMMON VARIABLE
+//------------------------------------------
+@import "webNova/mixins/_mixins";
+@brand-fontSize: 14px;
+@brand-lineHeight: 20px;
+@brand-fontFamily: 'PT Sans', "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+@brand-colorText: hsl(197, 7%, 30%);
+@brand-colorLink: hsl(197, 50%, 35%);
+@brand-colorLinkHover: hsl(15, 52%, 42%);
+@brand-round: 3px;
+
+@fontSizeSmall: 11px;
+@fontSizeMiddle: 18px;
+@fontSizeBig: 24px;
+
+@unit-space: 20px; // micromodule size
+
+@path-img: '/assets/img';
+
+@import "webNova/webNova";
+#webNova > .init(@path-img);
+
+// -----------------------------------------
+/* PROJECT STYLE */
+//------------------------------------------
+@hue: hue(@brand-colorText);
+@siteWidth: 660px;
+body {
+  background: #E1E7EB url("@{path-img}/bg_page.png");
+}
+.header {
+  background: #3B291F url("@{path-img}/header-bg.png");
+  padding: @unit-space 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+  .header_content {
+    margin: auto;
+    width: @siteWidth;
+  }
+    .header_content_logo {
+      @bgColor: hsl(52, 80%, 55%);
+      font-size: 26px;
+      font-weight: bold;
+      color: #424954;
+      letter-spacing: .05em;
+      text-align: center;
+      .text-shadow(lighten(@bgColor, 30%));
+      width: 80px;
+      line-height: 110%;
+      padding: 5px;
+      background: @bgColor;
+      height: 57px;
+      .grad(@bgColor, 17%);
+      .round(6px);
+      @sh: 1px -1px 0 darken(@bgColor, 24%),
+           -1px 1px 0 darken(@bgColor, 24%),
+            0 0 5px 1px hsl(40, 85%, 65%),
+          inset 0 1px 0 lighten(@bgColor, 35%);
+      .shadow(@sh);
+    }
+    .header_content_title {
+      width: 300px;
+      border-left: 1px solid #ddd;
+      padding: 10px @unit-space;
+      font-size: 15px;
+      line-height: 150%;
+      color: #ddd;
+      margin: 0;
+    }
+.content {
+  margin: auto;
+  width: @siteWidth;
+}
+@leftWidth: 60px;
+  .content_left {
+    float: left;
+    width: @leftWidth;
+    min-height: 300px;
+  }
+  .content_right {
+    float: left;
+    width: @siteWidth - @leftWidth;
+    margin-top: 2 * @unit-space;
+  }
+
+.form-progress {
+  background-color: #FFF;
+  .round(@brand-round);
+  @sh: 0 0 3px hsl(@hue, 7%, 80%);
+  .shadow(@sh);
+  width: 29px;
+  margin-top: 2 * @unit-space;
+  .border(hsl(@hue, 7%, 75%));
+}
+.form-progress--fixed {
+  position: fixed;
+  top: 0px;
+}
+  .form-process_title {
+    padding: 5px 10px;
+    background-color: hsl(@hue, 7%, 93%);
+    border-bottom: 1px solid hsl(@hue, 7%, 75%);
+  }
+    .form-process_title_note {
+      margin-left: -2px;
+    }
+
+  .form-progress_list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+    .form-progress_list_item {
+      margin-bottom: -1px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+      .form-progress_list_item_link {
+        @color: hsl(@hue, 7%, 97%);
+        display: block;
+        width: 7px;
+        height: 15px;
+        background-color: @color;
+        .border(darken(@color, 20%));
+        @sh: inset 0 1px 2px darken(@color, 15%);
+        .shadow(@sh);
+      }
+      .form-progress_list_item_link--error {
+        @color: hsl(10, 50%, 80%);
+        background-color: @color;
+        .border(darken(@color, 10%));
+        @sh: inset 0 1px lighten(@color, 12%),
+             inset 0 0 2px lighten(@color, 10%),
+             inset 0 -1px darken(@color, 35%),
+             0 1px 2px 1px hsl(20, 60%, 86%);
+        .shadow(@sh);
+      }
+      .form-progress_list_item_link--success {
+        @color: hsl(90, 50%, 72%);
+        background-color: @color;
+        .border(darken(@color, 13%));
+        @sh: inset 0 1px lighten(@color, 14%),
+             inset 0 0 2px lighten(@color, 10%),
+             inset 0 -1px darken(@color, 35%),
+                   0 1px 2px 1px hsl(100, 50%, 85%);
+        .shadow(@sh);
+      }
+
+.form-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+  word-spacing: .1em;
+  margin: 0 0 @unit-space;
+  padding-bottom: 2px;
+  border-bottom: 1px solid hsl(@hue, 10%, 55%);
+  .shadow(~'0px 1px 0px #FFF');
+}
+.form-line {
+  padding-bottom: @unit-space;
+  margin-bottom: @unit-space / 2;
+
+}
+.label {
+  font-style: italic;
+  color: lighten(@brand-colorText, 20%);
+  padding-top: 0;
+}
+.input-note {
+  margin: 0 0 @unit-space / 2;
+}
+.footer {
+  padding: @unit-space 0;
+
+}
+  .footer_content {
+    margin: auto;
+    width: @siteWidth;
+  }

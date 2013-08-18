@@ -1,0 +1,189 @@
+#common { .init(@fontSize,
+                @fontSizeBig,
+                @fontSizeMiddle,
+                @fontFamily,
+                @lineHeight,
+                @unitSpace,
+                @colorText,
+                @colorTextGhost,
+                @colorLink,
+                @colorLinkHover,
+                @colorTextSelectBg,
+                @bgColor) {
+// -----------------------------------------
+// COMMON HTML ELEMENTS STYLE
+//------------------------------------------
+
+// class name variable ---------------------
+
+// -----------------------------------------
+
+// local variable and mixin ----------------
+@_unitSpace: @unitSpace;
+// -----------------------------------------
+
+// COMPONENT STYLE -------------------------
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  font: @fontSize @fontFamily;
+  line-height: @lineHeight;
+  color: @colorText;
+  background-color: @bgColor;
+  background-image: url("@{path-img}/bg_page.png");
+}
+p, dl {
+  font-size: 1em;
+  margin: 0 0 @lineHeight 0;
+}
+h1 {
+  font-size: @fontSizeBig;
+  line-height: 1.5 * @lineHeight; // было 2
+  margin: @lineHeight 0 0;
+}
+h2, h3, h4, h5, h6 {
+  font-size: @fontSizeMiddle;
+  line-height: @lineHeight;
+  margin: @lineHeight 0 0;
+}
+a {
+  color: @colorLink;
+  text-decoration: none;
+  border-bottom: 1px solid fadeout(@colorLink, 60%);
+  &:hover {
+    color: @colorLinkHover;
+    border-bottom-color: fadeout(@colorLinkHover, 60%);
+  }
+}
+
+// цвет выделенного текста
+::-moz-selection {
+  background: @colorTextSelectBg;
+  text-shadow: none;
+}
+::selection {
+  background: @colorTextSelectBg;
+  text-shadow: none;
+}
+ul,
+ol,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: 0 0 0 @_unitSpace;
+  padding-left: 0;
+}
+ol ol li {
+  list-style-type: lower-alpha;
+}
+ol ol ol li {
+  list-style-type: lower-roman;
+}
+nav ul, nav ol {
+  padding-left: 0;
+  margin: 0;
+}
+p + ul,
+p + ol {
+  //margin-top: -@_unitSpace;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted @colorText;
+  cursor: help;
+}
+ins,
+mark {
+  background-color: #ffee55;
+  color: @colorText;
+  text-decoration: none;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1em;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: Menlo, Monaco, monospace, sans-serif;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid @colorTextGhost;
+}
+figcaption {
+  font-size: .85em;
+  font-style: italic;
+}
+// стили форм
+button,
+input,
+select,
+textarea {
+  font-family: @fontFamily;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: @colorTextGhost;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: @colorTextGhost;
+}
+[disabled] {
+  cursor: default !important;
+}
+// -----------------------------------------
+
+// MODULES ---------------------------------
+.Code(@colorBg, @colorBorder, @padding) {
+  code {
+    padding: @padding;
+    font-size: .85em;
+    display: inline-block;
+    line-height: 1;
+    background: @colorBg;
+    border: 1px solid @colorBorder;
+  }
+} // END code()
+
+.Pre(@colorBg, @borderColor, @round) {
+  pre {
+    background: @colorBg;
+    border: 1px solid @borderColor;
+    .round(@round);
+    padding: @_unitSpace - 1;
+    white-space: pre;
+    overflow: auto;
+  }
+} // END .pre()
+
+.Kbd(@padding, @shadow, @color, @colorBg, @colorBorder, @round) {
+  kbd {
+    padding: @padding;
+    .round(@round);
+    .shadow(@shadow);
+    background-color: @colorBg;
+    border-color: @colorBorder;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: @color;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+  }
+} // END .kbd()
+
+//----------------------------------
+}}

@@ -1,0 +1,94 @@
+#webNova { .init(@path-img) {
+// -----------------------------------------
+// MAIN FILE
+//------------------------------------------
+@import "mixins/design";
+
+// normalize -----------------------------
+@import "components/normalize";
+#normalize > .init();
+
+@borderColor: hsl(197, 7%, 55%);
+@glowColor: hsl(185, 75%, 70%);
+@bgColor: hsl(202, 4%, 94%);
+
+// начальные стили html-элементов ---------
+@import "components/common";
+// [размер шрифта сайта, шрифт средний, шрифт крупный, гарнитура шрифта, интерльяж, микромодуль,
+// цвет текста сайта, цвет текста плейсхолдеров, цвет ссылки, цвет ссылки при наведении, цвет фона при выделении текста,
+// цвет фона сайта]
+#common > .init(@brand-fontSize,
+                @fontSizeBig,
+                @fontSizeMiddle,
+                @brand-fontFamily,
+                @brand-lineHeight,
+                @unit-space,
+                @brand-colorText,
+                lighten(@brand-colorText, 50%),
+                @brand-colorLink,
+                @brand-colorLinkHover,
+                yellow,
+                @bgColor);
+//#common > .init > .Code(#f8f8f8, #ddd, 3px 3px 0px); // [цвет фона, цвет бордюра, поля]
+//#common > .init > .Pre(#f8f8f8, #ddd, @brand-round); // [цвет фона, цвет бордюра, радиус скругления]
+// [поля, тень, цвет текста, цвет фона, цвет бордюра, радиус скругления]
+//#common > .init > .Kbd(0 6px, ~'0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #FFF', #444, #fafafa, #ccc, @brand-round);
+
+// layout ---------------------------------
+@import "components/layout";
+#layout > .init();
+#layout > .init > .Grid(@unit-space);
+// [высота кегля, ширина блока, минимальная высота блока, расстояние между блоками, расстояние по высоте между блоками]
+//#layout > .init > .Blocks-grid(@brand-fontSize, 160px, 120px, @unit-space, 2 * @unit-space);
+
+// forms ----------------------------------
+@import "components/forms";
+// [величина микромодуля, длина инпута, высота инпута, поля инпута слева и справа, поля инпута сверху, поля инпута снизу,
+// цвет текста сайта, основной цвет инпетов, цвет ошибки, цвет успеха, цвет недоступного поля, скругления, цвет бордюра,
+// цвет звёздочки для обязательных полей]
+#forms > .init(@unit-space, 210px, 27px, 5px, 4px, 4px,
+               @brand-colorText,
+               @borderColor,
+               hsl(15, 55%, 30%),
+               hsl(90, 70%, 30%),
+               hsl(197, 30%, 96%),
+               @brand-round, red);
+#forms > .init > .Input-sizes(8px); // [ширина одной буквы]
+#forms > .init > .Form-horizont(140px, @unit-space); // [ширина левой стороны, отступ между правой и левой стороной]
+#forms > .init > .Input-style();
+#forms > .init > .Inputs-errors(@brand-fontSize);
+#forms > .init > .Inputs-errors > .Input-shake();
+#forms > .init > .Checkbox-radio();
+#forms > .init > .Select(#666, @glowColor); // [цвет стрелочки вниз]
+#forms > .init > .Input-file();
+
+// кнопки ---------------------------------
+@import "components/buttons";
+// []
+#buttons > .init(@unit-space, 27px, 4px, 5px, @borderColor, @brand-round);
+#buttons > .init > .Button(@path-img, "sprite_button.png"); // [файл спрайта]
+#buttons > .init > .Btn(@brand-colorText, @glowColor); // [цвет текста кнопки, цвет свечения кнопки при наведение]
+#buttons > .init > .Mark(hsl(360, 0%, 90%)); // [цвет марки]
+#buttons > .init > .Ui-group(@brand-fontSize); // [высота кегля]
+
+
+// разнообразные классы -------------------
+@import "components/misc";
+#misc > .init();
+//#misc > .init > .Arrows(4px, #AAA); // [размер, цвет]
+  #misc > .init > .ToolTip(hsl(180, 60%, 85%); // цвет
+                           @brand-round; // скругления углов
+                           190px); // максимальная длина подсказаки
+//#misc > .init > .Note();
+
+// косметические классы -------------------
+@import "components/cosmetic";
+#cosmetic > .init();
+#cosmetic > .init > .Spacer(@unit-space); // [margin]
+#cosmetic > .init > .Padding(@unit-space); // [padding]
+//#cosmetic > .init > .Null();
+#cosmetic > .init > .Float();
+// [акцедентный размер шрифта, средний размер шрифта, маленький шрифт, полупрозрачный цвет]
+//#cosmetic > .init > .Typography(@fontSizeBig, @fontSizeMiddle, @fontSizeSmall, lighten(@brand-colorText, 50%));
+//-----------------------------------------
+}}

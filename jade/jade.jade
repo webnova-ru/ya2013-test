@@ -1,0 +1,306 @@
+!!! 5
+html
+//
+  <![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width')
+        link(type='image/x-icon', href='assets/img/icons/favicon.ico', rel='shortcut icon')
+        link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='assets/css/style.css')
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+        script
+            window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\\/script>')
+//if lt IE 9
+      script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+        script(src='assets/plugins/uiNova/uiNova.js')
+        script(src='assets/plugins/formNova/formNova.js')
+        script(src='assets/js/common.js')
+        meta(name='description', content='Описание')
+        meta(name='keywords', content='Ключевые слова')
+        title Ответ на вопрос № 15
+    body
+        header.header
+            .header_content
+                .-row
+                    .-unit
+                        .header_content_logo ШРИ 2013
+                    .-unit
+                        h1.header_content_title
+                            | Ответ на тестовый вопрос №15
+                            br
+                            | Школы разработки интерфесов
+        .content
+            .content_left
+                .form-progress
+                    .form-process_title
+                        span.form-process_title_note.-toolTip(data-note='Индикатор заполнения формы') ?
+                    ul.form-progress_list
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#1')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#2')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#3')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#4')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#5')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#6')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#7')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#8')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#9')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#10')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#11')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#12')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#13')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#14')
+                        li.form-progress_list_item
+                            a.form-progress_list_item_link(href='#15')
+            .content_right
+                form#js-form(action='#', method='post', enctype='multipart/form-data', data-validate='formNova')
+                    h2.form-title Заполните анкету
+                    .form-line.-form-line
+                        label.label.-form-left(for='q1_1') Вопрос 1
+                        a.js-questionLink(name='anchor_q1_1')
+                        .-form-right
+                            p.input-note
+                                | Год рождения.
+                            input#q1_1.-input-text.-width-100(name='q1_1', data-validrules='required|isNaturalNoZero|greaterThan[1950]')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q2_1') Вопрос 2
+                        a.js-questionLink(name='anchor_q2_1')
+                        .-form-right
+                            p.input-note
+                                | Город, в котором вы живёте.
+                            input#q2_1.-input-text.-width-100(name='q2_1', data-validrules='required|alphaRUdash|minLength[2]')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q3_1') Вопрос 3
+                        a.js-questionLink(name='anchor_q3_1')
+                        .-form-right
+                            p.input-note
+                                | Вуз, факультет, специальность, кафедра.
+                            textarea#q3_1.-textarea.-width-100(name='q3_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q4_1') Вопрос 4
+                        a.js-questionLink(name='anchor_q4_1')
+                        .-form-right
+                            p.input-note
+                                | Год окончания вуза.
+                            input#q4_1.-input-text.-width-100(name='q4_1', data-validrules='required|isNaturalNoZero|greaterThan[2000]')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q5_1') Вопрос 5
+                        a.js-questionLink(name='anchor_q5_1')
+                        .-form-right
+                            p.input-note
+                                | Уровень владения английским языком:
+                            span.input-note.-ui-group
+                                button.-ui-group_item.-btn(type='button', data-radio='radio1', data-radiovalue='1') начальный
+                                button.-ui-group_item.-btn(type='button', data-radio='radio1', data-radiovalue='2') cредний
+                                button.-ui-group_item.-btn(type='button', data-radio='radio1', data-radiovalue='3') свободное владение
+                            .-k-hide
+                                input(type='radio', name='radio1', value='1')
+                                input(type='radio', name='radio1', value='2')
+                                input(type='radio', name='radio1', value='3')
+                            textarea#q5_1.-textarea.-width-100(name='q5_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q6_1') Вопрос 6
+                        a.js-questionLink(name='anchor_q6_1')
+                        .-form-right
+                            p.input-note
+                                | Чего вы ожидаете от участия в Школе?
+                            textarea#q6_1.-textarea.-width-100(name='q6_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q7_1') Вопрос 7
+                        a.js-questionLink(name='anchor_q7_1')
+                        .-form-right
+                            p.input-note
+                                | Откуда вы о нас узнали?
+                            textarea#q7_1.-textarea.-width-100(name='q7_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q8_1') Вопрос 8
+                        a.js-questionLink(name='anchor_q8_1')
+                        .-form-right
+                            p.input-note
+                                | Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?
+                            textarea#q8_1.-textarea.-width-100(name='q8_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q9_1') Вопрос 9
+                        a.js-questionLink(name='anchor_q9_1')
+                        .-form-right
+                            p.input-note
+                                | Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.
+                            textarea#q9_1.-textarea.-width-100(name='q9_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q10_1') Вопрос 10
+                        a.js-questionLink(name='anchor_q10_1')
+                        .-form-right
+                            p.input-note
+                                | Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.
+                            textarea#q10_1.-textarea.-width-100(name='q10_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q11_1') Вопрос 11
+                        a.js-questionLink(name='anchor_q11_1')
+                        .-form-right
+                            p.input-note
+                                | Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до
+                                | специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента
+                                | укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.
+                            textarea#q11_1.-textarea.-width-100(name='q11_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q12_1') Вопрос 12
+                        a.js-questionLink(name='anchor_q12_1')
+                        .-form-right
+                            p.input-note
+                                | Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете
+                                | с их помощью? С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
+                            textarea#q12_1.-textarea.-width-100(name='q12_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q13_1') Вопрос 13
+                        a.js-questionLink(name='anchor_q13_1')
+                        .-form-right
+                            p.input-note
+                                | Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов
+                                | своих цифр. Пример такого числа:
+                            p.input-note
+                                i 4! + 0! + 5! + 8! + 5! = 40585
+                            p.input-note
+                                | В качестве ответа на вопрос пришлите ссылку на
+                                a(href='//jsfiddle.net') http://jsfiddle.net/
+                                br
+                                | с вашим кодом или на ваш репозиторий на
+                                a(href='//github.com') https://github.com/
+                                | .
+                            textarea#q13_1.-textarea.-width-100(name='q13_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q14_1') Вопрос 14
+                        a.js-questionLink(name='anchor_q14_1')
+                        .-form-right
+                            p.input-note
+                                | Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую.
+                                | Грузоподъемность вашего корабля ограничена, поэтому за один рейс вы можете перевезти не более N кг полезного груза.
+                                | Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а также летать
+                                | в любую точку пространства. Каждая планета может содержать на себе груз, который можно взять.
+                                | Также на каждой планете груз можно оставить.
+                            p.input-note
+                                strong Задание:
+                            p.input-note
+                                | Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
+                                | Полное условие задачи доступно на
+                                a(href='//github.com/yandex-shri/introtask-space') https://github.com/yandex-shri/introtask-space
+                                | .
+                                br
+                                | В качестве ответа на вопрос пришлите ссылку на
+                                a(href='//jsfiddle.net') http://jsfiddle.net/
+                                br
+                                | с вашим кодом
+                                | или на ваш репозиторий на
+                                a(href='//github.com') https://github.com/
+                                | .
+                            textarea#q14_1.-textarea.-width-100(name='q14_1', data-validrules='required')
+                    .form-line.-form-line
+                        label.label.-form-left(for='q15_1') Вопрос 15
+                        a.js-questionLink(name='anchor_q15_1')
+                        .-form-right
+                            p.input-note
+                                | Сверстайте форму-анкету с нашими заданиями для кандидатов.
+                                | Страница должна работать в следующих браузерах:
+                                | MSIE (8, 9, 10), Google Chrome (26, 27), Firefox (20, 21), Opera (12.15, 12.14), Яндекс.Браузер 1.5.
+                                | По возможности используйте приёмы безопасной деградации CSS.
+                                | Страница должна содержать интерактив, реализованный с помощью JS и jQuery. Это может быть:
+                            ul
+                                li проверка полноты и правильности заполнения полей (где это возможно);
+                                li возможность свернуть и развернуть разделы (аккордеон);
+                                li индикатор заполнения анкеты;
+                                li что-нибудь ещё.
+                            p.input-note
+                                | Подумайте над тем, как эти данные будут отправляться на сервер.
+                            p.input-note
+                                | Будет плюсом, если вы сверстаете страницу, используя БЭМ.
+                            p.input-note
+                                strong Дополнительные задания
+                            p.input-note
+                                | 1. Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.
+                            p.input-note
+                                | 2. Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.
+                            p.input-note
+                                | Разработку необходимо вести на
+                                a(href='//github.com') https://github.com/
+                                | . В качестве ответа на вопрос пришлите ссылку на проект.
+                            textarea#q15_1.-textarea.-width-100(name='q15_1', data-validrules='required')
+                    h2.form-title Расскажите нам о себе
+                    .-form-line
+                        label.-label.-form-left(for='FileResume') Резюме до 250 КБ
+                        .-form-right
+                            input#FileResume.-input-file(type='file', name='FileResume')
+                    .-form-line
+                        label.-label.-form-left(for='MK') Ссылка на профиль в Моем Круге
+                        .-form-right
+                            input#MK.-input-text.-width-100(type='text', name='MK', data-validrules='required')
+                    .-form-line
+                        .-label.-form-left.-label--spacer Имя, Фамилия
+                        .-form-right
+                            .-row
+                                .-unit1of2
+                                    label.-label(for='firstName') Имя
+                                    input#firstName.-input-text.-width-100(type='text', name='firstName', data-validrules='required|alphaRU')
+                                .-unit1of2
+                                    label.-label(for='lastName') Фамилия
+                                    input#lastName.-input-text.-width-100(type='text', name='lastName', data-validrules='required|alphaRU')
+                    .-form-line
+                        label.-label.-form-left(for='Phone') Телефон
+                        .-form-right
+                            span.-ui-group
+                                span.-ui-group_item.-mark +7 (
+                                input#CityCode.-ui-group_item.-input-text.-letter4(type='text', name='CityCode', data-validrules='required|numeric')
+                                span.-ui-group_item.-mark )
+                                input#Phone.-ui-group_item.-input-text.-letter10(type='text', name='Phone', data-validrules='required|numericDash')
+                            span.-form-note укажите код города
+                    .-form-line
+                        label.-label.-form-left(for='Email')
+                            strong E-mail
+                        .-form-right
+                            input#Email.-input-text.-width-100(type='text', name='Email', data-validrules='required|validEmail')
+                    .-form-line
+                        label.-label.-form-left(for='MoreInfo') Дополнительные сведения
+                        .-form-right
+                            textarea#MoreInfo.-textarea.-width-100.-k-spacer(name='MoreInfo')
+                            label.-label.-width-100(for='RecommendBy') Откуда вы узнали о нашем предложении?
+                            select#RecommendBy.-select(name='RecommendBy', data-validrules='selectRule')
+                                option(value='no') Выбрать
+                                option(value='от HR-менеджера Яндекса') от HR-менеджера Яндекса
+                                option(value='Я.Субботник') Я.Субботник
+                                option(value='Yet another Conference') Yet another Conference
+                                option(value='на другой конференции') на другой конференции
+                                option(value='из поиска') из поиска
+                                option(value='по рекомендации') по рекомендации
+                                option(value='other') другое
+                            .-chosen.-k-spacer_t
+                                label.-chosen_label
+                                    input#js-checkbox.-chosen_input(type='checkbox', name='rr1', data-validrules='required')
+                                    | Я
+                                    | даю свое согласие на передачу в ООО «ЯНДЕКС»
+                                    | резюме и/или анкеты, содержащих мои персональные данные, и согласен
+                                    | с тем, что они будут храниться в ООО «ЯНДЕКС»
+                                    | в течение 5 лет и будут обрабатываться
+                                    | исключительно для целей предложения мне вакансий группы компаний
+                                    | «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+                    .-form-line.-form-action
+                        .-form-right
+                            button.-button(type='submit') Отправить
+                            button#js-reset-form.-button.-button--gray.-k-spacer_l(type='reset') Очистить
+        footer.footer
+            p.footer_content
+                | Задание выполнил Михаил Махоткин.
+                a(href='#') Исходный код
+                | .
